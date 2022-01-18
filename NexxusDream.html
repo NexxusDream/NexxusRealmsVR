@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--GOAL: To have portals leading to the following: 
+
+          - Zero Ring Theory on txt panels?
+          - Quantum Computing
+          - NexxusDream World -- social links and etc
+          - Dream 
+          - Music worlds (3) :: Do last
+          - Coding worlds showing off code on txt panels
+-->
+<html>
+  <head>
+    <title>Nexxus Realms</title>
+
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
+    <script src="js/aframe-animation-component.min.js"></script>
+    <script src="js/aframe-environment-component.min.js"></script>
+    <script>
+      document.querySelector("a-link").navigate("destination.html");
+    </script>
+    <script src="js/aframe-animation-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene
+      class="fullscreen"
+      inspector=""
+      keyboard-shortcuts=""
+      screenshot=""
+      vr-mode-ui=""
+      ><canvas
+        class="a-canvas"
+        data-aframe-canvas="true"
+        width="300"
+        height="150"
+      ></canvas>
+
+      <a-assets>
+        <img id="lnzThumbnail" src="img/lnz.jpg" />
+        <img id="spectrumThumbnail" src="img/spectrum.jpg" />
+        <img id="homeThumbnail" src="img/deepdream_in_the_woods.png" />
+        <img id="gatewayThumbnail" src="img/gateway.jpg" />
+        <img id="Zero-Ring-Idea-ONE" src="img/Zero-Ring-Theory/Zero-Ring-Idea-ONE--202101040837291000.jpg" />
+        <img id="Zero Ring-Field-Method-ONE" src="img/Zero-Ring-Theory/Zero Ring-Field-Method_compared_to_Classical-Methods-1.PNG" />
+        <img id="Zero Ring-Field-Method-TWO" src="img/Zero-Ring-Theory/Zero Ring-Field-Method_compared_to_Classical-Methods-2.PNG" />
+        <audio id="dreamer" src="sound/prelude.mp3"></audio>
+      </a-assets>
+
+
+      <a-entity
+        id="text-plane"
+        position="0 4 -8"
+        geometry="primitive: plane; width: 4; height: auto; depth: 30"
+        material="color: pink"
+        text="value: Thank you for joining us (NexxusDream). Have fun and Explore! I recommend
+        checking out the Zero Ring Theory portal for some fun thoughts ;)"
+        sound="on: mouseenter; src: #greeting; loop: false"
+      >
+      </a-entity>
+      <a-image src="#Zero-Ring-Idea-ONE" position="-2 2 -8"></a-image>
+      <a-image src="#Zero Ring-Field-Method-ONE" position="0 2 -8"></a-image>
+      <a-image src="#Zero Ring-Field-Method-TWO" position="2 2 -8"></a-image>
+
+      <!-- Place in the entity that controls the audio here -->
+      <a-entity
+        geometry="primitive: sphere; color: blue"
+        visible="false"
+        position="0 2 -3"
+        sound="on:mouseenter; src: #dreamer; loop: true"
+      ></a-entity>
+
+      <a-entity
+        environment="seed:24;skyType:gradient;skyColor:#26047d;horizonColor:#7604e0;
+        lightPosition:-0.72 0.62 0.4;fog:0.8;ground:spikes;groundYScale:4.91;groundColor:#047d65;
+        dressing:towers;dressingAmount:5;dressingColor:#fb000e;dressingScale:15;dressingVariance:20 20 20;
+        grid:1x1;gridColor:#01211a;preset:tron"
+      >
+        <!-- Animation for making the sky shift colors -->
+
+        <a-animation
+          attribute="environment.skyColor"
+          from="#26047d"
+          to="#091b39"
+          dur="60000"
+          direction="alternate"
+          repeat="indefinite"
+        ></a-animation>
+
+        <a-animation
+          attribute="environment.horizonColor"
+          from="#7604e0"
+          to="#fef631"
+          dur="60000"
+          direction="alternate"
+          repeat="indefinite"
+        ></a-animation>
+      </a-entity>
+
+      <a-entity
+        link="href: index.html; title: Back to Homeworld; image: #homeThumbnail; on: click; color: yellow; peekMode: true"
+        position="2 2 3"
+      ></a-entity>
+
+      <a-entity
+        link="href: fog.html; title: Enter The Fog; image: #homeThumbnail; on: click; color: brown; peekMode: true"
+        position="-1 2 -20"
+      ></a-entity>
+
+      <a-camera>
+        <a-cursor> </a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
