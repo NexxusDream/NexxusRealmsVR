@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!--GOAL: To have portals leading to the following: 
-
-          - Zero Ring Theory on txt panels?
-          - Quantum Computing
-          - NexxusDream World -- social links and etc
-          - Dream 
-          - Music worlds (3) :: Do last
-          - Coding worlds showing off code on txt panels
--->
 <html>
   <head>
     <title>Nexxus Realms</title>
@@ -40,23 +31,34 @@
         <img id="spectrumThumbnail" src="img/spectrum.jpg" />
         <img id="homeThumbnail" src="img/deepdream_in_the_woods.png" />
         <img id="gatewayThumbnail" src="img/gateway.jpg" />
+        <img id="EthQRCode" src="img/EthQRCode-NexxusDream.PNG" />
         <img id="Zero-Ring-Idea-ONE" src="img/Zero-Ring-Theory/Zero-Ring-Idea-ONE--202101040837291000.jpg" />
         <img id="Zero Ring-Field-Method-ONE" src="img/Zero-Ring-Theory/Zero Ring-Field-Method_compared_to_Classical-Methods-1.PNG" />
         <img id="Zero Ring-Field-Method-TWO" src="img/Zero-Ring-Theory/Zero Ring-Field-Method_compared_to_Classical-Methods-2.PNG" />
         <audio id="dreamer" src="sound/prelude.mp3"></audio>
       </a-assets>
 
-
       <a-entity
-        id="text-plane"
-        position="0 4 -8"
+        id="text-plane-twitter"
+        position="3 3.5 -8"
         geometry="primitive: plane; width: 4; height: auto; depth: 30"
-        material="color: pink"
-        text="value: Thank you for joining us (NexxusDream). Have fun and Explore! I recommend
-        checking out the Zero Ring Theory portal for some fun thoughts ;)"
+        material="color: purple"
+        text="value: Twitter, YouTube: @nexxusdream"
         sound="on: mouseenter; src: #greeting; loop: false"
       >
       </a-entity>
+
+      <a-entity
+        id="text-plane-twitter"
+        position="3 4 -8"
+        geometry="primitive: plane; width: 4; height: auto; depth: 30"
+        material="color: purple"
+        text="value: Eth Donations for continued support in developing worlds like this: 0x545d490f288053950f3511240366a1576B8a0065m"
+        sound="on: mouseenter; src: #greeting; loop: false"
+      >
+      </a-entity>
+
+      <a-image src="#EthQRCode" position="0 4 -8"></a-image>
       <a-image src="#Zero-Ring-Idea-ONE" position="-2 2 -8"></a-image>
       <a-image src="#Zero Ring-Field-Method-ONE" position="0 2 -8"></a-image>
       <a-image src="#Zero Ring-Field-Method-TWO" position="2 2 -8"></a-image>
